@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>View Products</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="customerpage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"/>
+  </head>
+  <header>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="nav-list">
+        <a href="customerpage.html" class="link">Home</a>
+        <a href="cusaccount.html" class="link">My Account</a>
+        <a href="contact.html" class="link">Contact</a>
+        <a href="roleselection.html" class="link">Log Out</a>
+    </ul>
+  </header>
+  <body>
+    <section class="product-list ">
+      <div>
+        <h1 class="align-center">
+          Products
+        </h1>
+      </div>
+      
+      <div class="searchbar">
+          <input class="search-input" placeholder="Search">
+          <span class="search-icon"></span>
+        </div>
+
+        <div class="slidecontainer">
+          <p>Price filter: <span id="current"></span></p>
+          <input type="range" min="1" max="6000" value="6000" id="price">
+          </div>
+
+          <script>
+            var slider = document.getElementById("price");
+            var output = document.getElementById("current");
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+            </script>
+      <div class="product-container">
+   
+<!-- First Product -->
+      <div class="card">
+        <div class="content">
+          <div class="new">
+            <img src="new.png">
+          </div>
+
+        <div class="title">Sennheiser HD 450BT</div>
+        <div class="image">
+          <img src="sennheiser.jpg"/>
+        </div>
+        <div class="text">
+          The new HD 450BT delivers active noise cancellation, high-quality wireless codec support and Bluetooth® 5.0.
+        </div>
+         </div>
+          <button  class="buy-button details" onclick="location.href='sennheiser.html'">
+            Buy Now
+            $149.95
+          </button>
+      </div>
+
+      <!-- Second Product -->
+      <div class="card">
+        <div class="title">Nikon Z9</div>
+        <div class="image">
+          <img src="nikonz9.png"/>
+        </div>
+        <div class="text">
+          Nikon's first mirrorless flagship, the Z9 offers image-makers the power and sophistication to overcome challenges and reliably capture the crucial moment.
+        </div>
+           <button  class="buy-button details" onclick="location.href='nikonz9.html'">
+            Buy Now
+            $5,499.95
+          </button>
+      </div>
+      
+<!-- Third Product -->
+      <div class="card">
+        <div class="title">Nike Adapt BB Black Pure Platinum</div>
+        <div class="image">
+          <img src="nike.jpg"/>
+        </div>
+        <div class="text">
+          This is a Nike shoes with self-lacing technology.
+        </div>
+           <button  class="buy-button details" onclick="location.href='nike.html'">
+            Buy Now
+            $235
+          </button>
+      </div>
+         
+    </section>
+  </body>
+  <footer>
+    <p>@RMIT &copy; <script>document.write(new Date().getFullYear());</script></p>
+  </footer>
+</html>
+
